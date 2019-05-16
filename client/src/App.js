@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p>🎉 Receive a relevant gif! 🎁</p>
         <ButtonToolbar>
-          <Button variant="light">Upload Image</Button>
+          <Button variant="primary" size="lg">Upload Image 🥳</Button>
         </ButtonToolbar>
       </header>
     </div>
