@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <p>🎉 Receive a relevant gif! 🎁</p>
         <ButtonToolbar>
-          <Button variant="primary" size="lg">Upload Image 🥳</Button>
+          <Button variant="primary" size="lg" onClick={activateLasers}>Upload Image 🥳</Button>
         </ButtonToolbar>
       </header>
     </div>

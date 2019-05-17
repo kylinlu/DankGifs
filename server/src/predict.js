@@ -12,3 +12,34 @@ app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-n
   .catch(err => {
     console.log(err);
   });
+
+  function addImageToApp(index) {
+    var imgType = document.getElementById("hidden-type" + index).value;
+    var imgValue = document.getElementById("hidden-val" + index).value;
+    
+    if(imgType === "url") {
+      app.inputs.create({
+        url: imgValue
+      }).then(
+        function(response) {
+          alert("Image successfully added!");
+        },
+        function(err) {
+          alert("Error Adding Image. Check to see if it is a duplicate.");
+        }
+      );
+    }
+    
+    else if(imgType === "base64") {
+      app.inputs.create({
+        base64: imgValue
+      }).then(
+        function(response) {
+          alert("Image successfully added!");
+        },
+        function(err) {
+          alert("Error Adding Image. Check to see if it is a duplicate.");
+        }
+      );
+    }
+  }
