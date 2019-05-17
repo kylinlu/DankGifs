@@ -8,6 +8,7 @@ const app = new Clarifai.App({apiKey: process.env.API_KEY});
 app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg')
   .then(response => {
     console.log(JSON.stringify(response.outputs[0]["data"]["concepts"][0]["name"]));
+    console.log(JSON.stringify(response.outputs[0]["data"]["concepts"][0]["value"]));
   })
   .catch(err => {
     console.log(err);
